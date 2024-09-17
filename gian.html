@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página de Juegos</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('imagenes/fondo1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        #juegos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .juego {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .juego img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Animación para las imágenes de fondo */
+        @keyframes cambioFondo {
+            0% { background-image: url('imagenes/fondo1.jpg'); }
+            33% { background-image: url('imagenes/fondo2.jpg'); }
+            66% { background-image: url('imagenes/fondo3.jpg'); }
+            100% { background-image: url('imagenes/fondo1.jpg'); }
+        }
+
+        body {
+            animation: cambioFondo 15s infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Página de Juegos</h1>
+        <nav>
+            <a href="#juegos">Juegos</a>
+            <a href="#contacto">Contáctanos</a>
+        </nav>
+    </header>
+
+    <section id="juegos">
+        <h2>Sección de Juegos</h2>
+        <div class="juego">
+            <img src="imagenes/juego1.jpg" alt="Juego 1">
+            <h3>Juego 1</h3>
+            <p>Descripción del juego 1.</p>
+        </div>
+        <div class="juego">
+            <img src="imagenes/juego2.jpg" alt="Juego 2">
+            <h3>Juego 2</h3>
+            <p>Descripción del juego 2.</p>
+        </div>
+        <div class="juego">
+            <img src="imagenes/juego3.jpg" alt="Juego 3">
+            <h3>Juego 3</h3>
+            <p>Descripción del juego 3.</p>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <form>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje"></textarea><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Mi Página de Juegos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
